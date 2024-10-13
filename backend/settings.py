@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-duq#sdhc=lqy4lam^9%k9+ldjrzw^h0ryh2@877c-dj@1oe+)%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gps-backend-2.onrender.com']
+ALLOWED_HOSTS = ['gps-backend-2.onrender.com', 'gps-frontend-1.onrender.com']
+
 
 
 # Application definition
@@ -87,13 +88,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myprojectdb',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'mypassword',
-        'HOST': 'localhost',
+        'NAME': 'myprojectdb_t2ng',
+        'USER': 'myprojectdb_t2ng_user',
+        'PASSWORD': 'WMkI3EP5Ng2fdCBLb4o7WE356KRCY7UB',
+        'HOST': 'dpg-cs5v4ba3esus73b4etfg-a',
         'PORT': '5432',
     }
 }
+# CORS configuration
+CORS_ALLOWED_ORIGINS = [
+    "https://gps-frontend-1.onrender.com",  # Your frontend URL
+]
+
 
 
 
