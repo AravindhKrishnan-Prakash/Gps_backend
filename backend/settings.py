@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-duq#sdhc=lqy4lam^9%k9+ldjrzw^h0ryh2@877c-dj@1oe+)%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gps-backend-2.onrender.com']
 
 
 # Application definition
