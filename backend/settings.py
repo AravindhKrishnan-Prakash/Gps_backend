@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,14 +87,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myprojectdb_t2ng',
-        'USER': 'myprojectdb_t2ng_user',
-        'PASSWORD': 'WMkI3EP5Ng2fdCBLb4o7WE356KRCY7UB',
-        'HOST': 'dpg-cs5v4ba3esus73b4etfg-a',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default="postgresql://postgres.mdirsuzyjjgdlslgpasj:aravindh@12AK@aws-0-ap-south-1.pooler.supabase.com:6543/postgres"
+    )
 }
 # CORS configuration
 CORS_ALLOWED_ORIGINS = [
